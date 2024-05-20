@@ -24,7 +24,7 @@ public class es3 {
         double latB = sc.nextDouble();
         System.out.println("terzo lato");
         double latC = sc.nextDouble();
-        System.out.println("il semiperimetro è : "+ areaTriangolo(latA,latB,latC)  );
+        System.out.println("l'area è : "+ areaTriangolo(latA,latB,latC)  );
 
 
     }
@@ -39,6 +39,7 @@ public class es3 {
         }
     }
     public static double areaTriangolo(double latA, double latB, double latC){
-        return (latA+latB+ latC) % 2;
+        double semiperimetro=  (latA+latB+ latC) / 2;
+        return Math.sqrt(semiperimetro*(semiperimetro- latA)*(semiperimetro- latB)*(semiperimetro- latC));
     }
 }
